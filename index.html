@@ -5,10 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./js/slick-1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="./js/slick-1.8.1/slick/slick-theme.css" />
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="./font/banny/style.css">
   <script src="https://kit.fontawesome.com/6b1a60c64e.js" crossorigin="anonymous"></script>
+
+
+
   <title>Document</title>
 </head>
 
@@ -49,7 +54,7 @@
               <button class="yellow-button ">BOOK TABLE</button>
               <button class="transparent-button ">EXPLORE</button>
             </div>
-            <a href="#">
+            <a href="#about-us">
               <div class="push-botton transparent-button">
                 <span> <i class="fas fa-chevron-down"></i></span>
               </div>
@@ -67,7 +72,7 @@
 
 
     </section>
-    <section class="about-us">
+    <section class="about-us" id="about-us">
       <div class="_container ">
         <div class="left-content">
           <div class="desription">
@@ -101,7 +106,7 @@
         </span>
         <div class="vertical-lines">
           <span class="outer-line"></span>
-          <span class="midle-line full"></span>
+          <span class="midle-line full-line"></span>
 
         </div>
         <div class="left-content">
@@ -128,7 +133,167 @@
     </section>
 
 
+    <section class="book-a-table">
+      <div class="_container ">
+        <div class="left-content">
+          <div class="desription">
+            <h2 class="titel-h2">BOOK A TABLE</h2>
+            <span class="yellow-line"></span>
+
+            <form action="#" method="GET" id="form-book-a-table">
+              <input type="text" tabindex="1" name="user-name" required class="input-field" placeholder="Введите имя">
+              <input type="email" tabindex="2" name="user-email" class="input-field" placeholder="E-mail (по желанию)">
+              <input type="tel" tabindex="3" name="user-phone" required class="input-field"
+                placeholder="Введите номер телефона">
+              <input type="number" tabindex="4" min="1" max="10" name="count-people-book-a-table" required
+                class="input-field" placeholder="Выберите количество гостей (до 10)">
+              <input type="date" tabindex="5" name="reservation-date" required class="input-field">
+              <input type="time" tabindex="6" name="reservation-time" required class="input-field" min="09:00"
+                max="23:00" step="900">
+              <button class="yellow-button" type="submit" form="form-book-a-table" value="Submit">BOOK NOW</button>
+            </form>
+
+          </div>
+        </div>
+        <div class="right-content">
+          <div class="photo-content">
+            <div class="photo__item">
+              <img class="item__img-rigth" src="./img/photo__item3.jpg" alt="fireplace">
+              <span class=" yellow-square  item__span-rigth" class="yellow-square"></span>
+            </div>
+          </div>
+        </div>
+        <span class="section__footer">
+          <span class="footer__item-text">Mon - Fri: <strong>8PM - 10PM</strong>, Sat - Sun: <strong>8PM - 3AM</strong>,
+            Phone: <strong>+40 729 131 637/+40 726 458 782</strong></span>
+        </span>
+      </div>
+
+
+    </section>
+
+
+    <section class="specialties">
+
+      <div class="_container ">
+        <span class="section__header">
+          <h3 class="titel-h3">SPECIALTIES</h3>
+        </span>
+        <div class="vertical-lines">
+          <span class="outer-line"></span>
+          <span class="midle-line full-line"></span>
+
+        </div>
+        <div class="slick-slider-specialties">
+          <div class="slick-slider-specialties__item">
+            <div class="left-content">
+              <div class="photo-content">
+                <div class="photo__items">
+                  <img class="item__img-left" src="./img/photo__item4.jpg" alt="fireplace">
+                  <span class="item__span-left" class="yellow-square"></span>
+                </div>
+              </div>
+            </div>
+            <div class="right-content">
+              <div class="desription">
+                <h2 class="titel-h2">CHOCOLATE PANCAKES</h2>
+                <span class="yellow-line"></span>
+                <h4 class="titel-h4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus,
+                  molestie est a, tempor magna.</h4>
+                <p class="text">Integer ullamcorper neque eu purus euismod, ac faucibus mauris posuere. Morbi non
+                  ultrices
+                  ligula. Sed
+                  dictum, enim sed ullamcorper feugiat, dui odio vehicula eros, a sollicitudin lorem quam nec sem.
+                  Mauris
+                  tincidunt feugiat diam convallis pharetra. Nulla facilisis semper laoreet.</p>
+              </div>
+            </div>
+          </div>
+          <div class="slick-slider-specialties__item">
+            <div class="left-content">
+              <div class="desription">
+                <h2 class="titel-h2">BLANCMANGE</h2>
+                <span class="yellow-line"></span>
+                <h4 class="titel-h4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus,
+                  molestie est a, tempor magna.</h4>
+                <p class="text">Integer ullamcorper neque eu purus euismod, ac faucibus mauris posuere. Morbi non
+                  ultrices
+                  ligula. Sed
+                  dictum, enim sed ullamcorper feugiat, dui odio vehicula eros, a sollicitudin lorem quam nec sem.
+                  Mauris
+                  tincidunt feugiat diam convallis pharetra. Nulla facilisis semper laoreet.</p>
+              </div>
+            </div>
+            <div class="right-content">
+
+              <div class="photo-content">
+                <div class="photo__items">
+                  <img class="item__img-rigth" src="./img/slider-photo-item1.jpg" alt="fireplace">
+                  <span class="item__span-rigth" class="yellow-square"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slick-slider-specialties__item">
+            <div class="left-content">
+              <div class="photo-content">
+                <div class="photo__items">
+                  <img class="item__img-left" src="./img/slider-photo-item2.jpg" alt="fireplace">
+                  <span class="item__span-left" class="yellow-square"></span>
+                </div>
+              </div>
+            </div>
+            <div class="right-content">
+              <div class="desription">
+                <h2 class="titel-h2">Pavlova</h2>
+                <span class="yellow-line"></span>
+                <h4 class="titel-h4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus,
+                  molestie est a, tempor magna.</h4>
+                <p class="text">Integer ullamcorper neque eu purus euismod, ac faucibus mauris posuere. Morbi non
+                  ultrices
+                  ligula. Sed
+                  dictum, enim sed ullamcorper feugiat, dui odio vehicula eros, a sollicitudin lorem quam nec sem.
+                  Mauris
+                  tincidunt feugiat diam convallis pharetra. Nulla facilisis semper laoreet.</p>
+              </div>
+            </div>
+          </div>
+          <div class="slick-slider-specialties__item">
+            <div class="left-content">
+              <div class="desription">
+                <h2 class="titel-h2">Clafouti</h2>
+                <span class="yellow-line"></span>
+                <h4 class="titel-h4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis dolor molestiae
+                  fuga
+                  quia a cum.</h4>
+                <p class="text">Integer ullamcorper neque eu purus euismod, ac faucibus mauris posuere. Morbi non
+                  ultrices
+                  ligula. Sed
+                  dictum, enim sed ullamcorper feugiat, dui odio vehicula eros, a sollicitudin lorem quam nec sem.
+                  Mauris
+                  tincidunt feugiat diam convallis pharetra. Nulla facilisis semper laoreet.</p>
+              </div>
+            </div>
+            <div class="right-content">
+              <div class="photo-content">
+                <div class="photo__item">
+                  <img class="item__img-rigth" src="./img/slider-photo-item3.jpg" alt="fireplace">
+                  <span class=" yellow-square  item__span-rigth" class="yellow-square"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
   </main>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="./js/slick-1.8.1/slick/slick.min.js"></script>
+  <script src="./js/script.js"></script>
+
 </body>
 
 </html>
