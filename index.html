@@ -21,19 +21,24 @@
   <header class="header">
     <nav class="menu">
       <div class="first-half">
-        <a href="#">HOME</a>
-        <a href="#">ABOUT</a>
-        <a href="#">TEAM</a>
-        <a href="#">BOOKING</a>
+        <ul class="first-half__links">
+          <li> <a href="#">HOME</a></li>
+          <li> <a href="#">ABOUT</a></li>
+          <li> <a href="#">TEAM</a></li>
+          <li> <a href="#">BOOKING</a></li>
+        </ul>
       </div>
       <div class="icon">
         <img src="./img/Vector.svg" alt="site logo">
       </div>
       <div class="second-half">
-        <a href="#">MENU</a>
-        <a href="#">GALERIE</a>
-        <a href="#">EVENTS</a>
-        <a href="#">CONTACT</a>
+        <ul class="second-half__links">
+          <li> <a href="#">MENU</a> </li>
+          <li> <a href="#">GALERIE</a> </li>
+          <li> <a href="#">EVENTS</a> </li>
+          <li> <a href="#">CONTACT</a> </li>
+        </ul>
+
       </div>
     </nav>
   </header>
@@ -147,9 +152,10 @@
                 placeholder="Введите номер телефона">
               <input type="number" tabindex="4" min="1" max="10" name="count-people-book-a-table" required
                 class="input-field" placeholder="Выберите количество гостей (до 10)">
-              <input type="date" tabindex="5" name="reservation-date" required class="input-field">
+              <input type="date" tabindex="5" name="reservation-date" required class="input-field"
+                placeholder="Выберите дату">
               <input type="time" tabindex="6" name="reservation-time" required class="input-field" min="09:00"
-                max="23:00" step="900">
+                max="23:00" step="900" placeholder="Выберите время бронирования">
               <button class="yellow-button" type="submit" form="form-book-a-table" value="Submit">BOOK NOW</button>
             </form>
 
@@ -165,7 +171,7 @@
         </div>
         <span class="section__footer">
           <span class="footer__item-text">Mon - Fri: <strong>8PM - 10PM</strong>, Sat - Sun: <strong>8PM - 3AM</strong>,
-            Phone: <strong>+40 729 131 637/+40 726 458 782</strong></span>
+            Phone: <strong><a href="tel:+40 729 131 637">+40 729 131 637</a></strong></span>
         </span>
       </div>
 
@@ -284,6 +290,132 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="delicious-menu">
+      <div class="_container">
+        <div class="desription">
+          <h2 class="titel-h2">DELICIOUS MENU</h2>
+          <span class="yellow-line"></span>
+          <h4 class="titel-h4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus,
+            molestie est a, tempor magna.</h4>
+        </div>
+        <div class="categories-menu">
+          <ul>
+            <li id="soupe">SOUPE<span></span></li>
+            <li id="pizza">PIZZA<span></span></li>
+            <li id="pasta">PASTA<span></span></li>
+            <li id="desert">DESERT<span></span></li>
+            <li id="wine">WINE<span></span></li>
+            <li id="beer">BEER<span></span></li>
+            <li id="drinks">DRINKS<span></span></li>
+          </ul>
+        </div>
+
+        <div class="available-menu">
+          <div class="menu__items">
+            <div class="dish__desriptions">
+              <div class="dish__desriptions__item">
+                <h4 class="name-dishs">PIZZA QUATRO STAGIONI</h4>
+                <span class="short-desriptions">Integer ullamcorper neque eu purus euismod</span>
+              </div>
+              <div class="dish__price"><span class="price">55,68 USD</span></div>
+            </div>
+            <div class="dish__desriptions">
+              <div class="dish__desriptions__item">
+                <h4 class="name-dishs">PIZZA QUATRO STAGIONI</h4>
+                <span class="short-desriptions">Integer ullamcorper neque eu purus euismod</span>
+              </div>
+              <div class="dish__price"><span class="price">55,68 USD</span></div>
+            </div>
+            <div class="dish__desriptions">
+              <div class="dish__desriptions__item">
+                <h4 class="name-dishs">PIZZA QUATRO STAGIONI</h4>
+                <span class="short-desriptions">Integer ullamcorper neque eu purus euismod</span>
+              </div>
+              <div class="dish__price"><span class="price">55,68 USD</span></div>
+            </div>
+            <div class="dish__desriptions">
+              <div class="dish__desriptions__item">
+                <h4 class="name-dishs">PIZZA QUATRO STAGIONI</h4>
+                <span class="short-desriptions">Integer ullamcorper neque eu purus euismod</span>
+              </div>
+              <div class="dish__price"><span class="price">55,68 USD</span></div>
+            </div>
+            <div class="dish__desriptions">
+              <div class="dish__desriptions__item">
+                <h4 class="name-dishs">PIZZA QUATRO STAGIONI</h4>
+                <span class="short-desriptions">Integer ullamcorper neque eu purus euismod</span>
+              </div>
+              <div class="dish__price"><span class="price">55,68 USD</span></div>
+            </div>
+            <div class="dish__desriptions">
+              <div class="dish__desriptions__item">
+                <h4 class="name-dishs">PIZZA QUATRO STAGIONI</h4>
+                <span class="short-desriptions">Integer ullamcorper neque eu purus euismod</span>
+              </div>
+              <div class="dish__price"><span class="price">55,68 USD</span></div>
+            </div>
+            <div class="dish__desriptions">
+              <div class="dish__desriptions__item">
+                <h4 class="name-dishs">PIZZA QUATRO STAGIONI</h4>
+                <span class="short-desriptions">Integer ullamcorper neque eu purus euismod</span>
+              </div>
+              <div class="dish__price"><span class="price">55,68 USD</span></div>
+            </div>
+            <div class="dish__desriptions">
+              <div class="dish__desriptions__item">
+                <h4 class="name-dishs">PIZZA QUATRO STAGIONI</h4>
+                <span class="short-desriptions">Integer ullamcorper neque eu purus euismod</span>
+              </div>
+              <div class="dish__price"><span class="price">55,68 USD</span></div>
+            </div>
+            <div class="dish__desriptions">
+              <div class="dish__desriptions__item">
+                <h4 class="name-dishs">PIZZA QUATRO STAGIONI</h4>
+                <span class="short-desriptions">Integer ullamcorper neque eu purus euismod</span>
+              </div>
+              <div class="dish__price"><span class="price">55,68 USD</span></div>
+            </div>
+            <div class="dish__desriptions">
+              <div class="dish__desriptions__item">
+                <h4 class="name-dishs">PIZZA QUATRO STAGIONI</h4>
+                <span class="short-desriptions">Integer ullamcorper neque eu purus euismod</span>
+              </div>
+              <div class="dish__price"><span class="price">55,68 USD</span></div>
+            </div>
+            <div class="dish__desriptions">
+              <div class="dish__desriptions__item">
+                <h4 class="name-dishs"> QUATRO STAGIONI QUATRO STAGIONI QUATRO STAGIONI QUATRO STAGIONI QUATRO STAGIONI QUATRO STAGIONI</h4>
+                <span class="short-desriptions">Integer ullamcorper neque eu purus euismod</span>
+              </div>
+              <div class="dish__price"><span class="price">55,68 USD</span></div>
+            </div>
+            <div class="dish__desriptions">
+              <div class="dish__desriptions__item">
+                <h4 class="name-dishs">PIZZA</h4>
+                <span class="short-desriptions">Integer ullamcorper neque eu purus euismod</span>
+              </div>
+              <div class="dish__price"><span class="price">55,68 USD</span></div>
+            </div>
+            <div class="dish__desriptions">
+              <div class="dish__desriptions__item">
+                <h4 class="name-dishs">PIZZA PIZZA PIZZA PIZZAPIZZA STAGIONI</h4>
+                <span class="short-desriptions">IntegerIntegerInteger ullamcorper neque eu purus euismod</span>
+              </div>
+              <div class="dish__price"><span class="price">55,68 USD</span></div>
+            </div>
+            <div class="dish__desriptions">
+              <div class="dish__desriptions__item">
+                <h4 class="name-dishs">PIZZA QUATRO STAGIONI</h4>
+                <span class="short-desriptions">IntegerIntegerInteger ullamcorper neque eu purus euismod</span>
+              </div>
+              <div class="dish__price"><span class="price">55,68 USD</span></div>
+            </div>
+            
+        </div>
+      </div>
       </div>
     </section>
 

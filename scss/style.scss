@@ -3,9 +3,7 @@ body{
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
-
 }
-
 
 
 .header{
@@ -18,8 +16,6 @@ body{
     transform: translate(-50%, 0);
     z-index: 900;
 
-   
-
 .menu{
     align-items: flex-start;
     display: flex;
@@ -27,7 +23,7 @@ body{
 }
 
 
-.first-half,.second-half{
+.first-half,.second-half {
     min-height: 99px;
     display: flex;
     justify-content: space-around;
@@ -36,6 +32,21 @@ body{
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
 }
+
+.first-half__links, .second-half__links{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    
+
+    li:hover{
+        opacity: 0.6;
+     transition: all 0.2s ease;
+    }
+}
+
 .icon{
 
     margin: 25px 35px 0 35px;
@@ -306,6 +317,7 @@ transition: all 0.2s ease;
 .desription, .photo-content{
     margin: 0 auto;
     max-width: 560px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -414,7 +426,6 @@ transition: all 0.2s ease;
     width: 100%;
     text-align: center;
     position: absolute;
-    padding-left: 8px;
     z-index: 5;
     top: 25px;
 }
@@ -425,10 +436,12 @@ transition: all 0.2s ease;
         max-width: 515px;
         width: 100%;
         box-sizing: border-box;
-        margin-top: 5px;
+        margin: 5px 5px 0 5px;
+        transition: all 0.4s ease;
     }
 
 }
+
 
 .input-field{
     padding: 10px;
@@ -446,16 +459,18 @@ transition: all 0.2s ease;
     width: 100%;
     text-align: center;
     position: absolute;
-    padding-left: 8px;
     bottom: 25px;
     z-index: 5;
     .footer__item-text{
-        font-family: Open Sans;
+        font-family: 'Open Sans', sans-serif;
         font-style: normal;
         font-weight: normal;
         font-size: 12px;
         line-height: 12px;        
         color: rgba(51, 51, 51, 0.5);
+        a{
+            color: rgba(51, 51, 51, 0.5);
+        }
     }
 }
 
@@ -528,4 +543,135 @@ transition: all 0.2s ease;
 }
 
 
+.delicious-menu{
+    padding: 100px 0;
+        ._container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        }
+        .categories-menu{   
+            max-width: 1440px;
+            width: 100%;
 
+            ul{
+                max-width: 1280px;
+                width: 100%;
+                list-style: none;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 0;
+                margin: 0 auto;
+
+                li{
+                    text-align: center;
+                    max-width: 80px;
+                    width: 100%;
+                    padding: 18.2px 20px;
+                    position: relative;
+                
+                    span:after{
+                    content: "";
+                    height: 100%;
+                     width: 1px;
+                    background: rgba(51, 51, 51, 0.2);
+                    position: absolute;
+                    top:0;
+                    right: 0;
+                     }
+                }
+        
+                li:last-child span{
+                    display: none;
+                }
+            }
+        }
+        .available-menu{
+        max-width: 1440px;
+        width: 100%;
+        
+            .menu__items{
+            max-width: 1280px;
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            margin: 0 auto;
+        
+        
+             .dish__desriptions{
+                max-width: 363px;
+                width: 100%;
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                font-family: "Banny Bold Round";
+                font-size: 18px;
+                line-height: 18px;
+                margin: 25px 15px;
+                padding: 0 15px;
+            
+            
+                    .dish__desriptions__item {
+                        max-width: 250px;
+                        width: 100%;
+                        overflow: hidden; 
+                        text-overflow: ellipsis; 
+                        max-height: 70px;
+                        height: 100%;
+                    
+                        .name-dishs{
+                            color: black;
+                            white-space: nowrap; 
+                            overflow: hidden; 
+                            text-overflow: ellipsis; 
+                            margin: 0;
+                        }
+                        .short-desriptions{
+                            font-family: 'Open Sans', sans-serif;
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: 12px;
+                            line-height: 12px;
+                            color: rgba(51, 51, 51, 0.5);
+                         }
+                    }                
+              }
+            }
+
+        }
+
+
+}
+
+
+
+
+
+
+////////////////// media
+@media screen and (max-width: 1125px){
+    .book-a-table {
+
+    .yellow-button{
+
+    transition: all 0.4s ease;
+    max-width: 250px;
+    width: 100%;
+}
+}
+}
+
+@media screen and (max-width: 1300px){
+    
+    .delicious-menu .available-menu .menu__items{
+    max-width: 846px;   
+    }
+}
+@media screen and (max-width: 900px){
+    
+    .delicious-menu .available-menu .menu__items{
+    max-width: 400px;   
+    }
+}
