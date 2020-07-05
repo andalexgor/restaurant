@@ -372,6 +372,9 @@ a:hover {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .desription, .photo-content {
@@ -570,7 +573,7 @@ a:hover {
 
 .specialties .slick-slider-specialties {
   min-width: 0;
-  max-width: 1200px;
+  max-width: 1400px;
   width: 100%;
   margin: 0 auto;
   position: relative;
@@ -757,6 +760,193 @@ a:hover {
   color: rgba(51, 51, 51, 0.5);
 }
 
+.private-events {
+  position: relative;
+  background: url(../img/bg-4.jpg) 0 0/100% auto no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+.private-events .footer__item-text {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.private-events .footer__item-text a {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.item__span__label-left, .item__span__label-right {
+  max-width: 80px;
+  width: 100%;
+  max-height: 475px;
+  height: 100%;
+  background: black;
+  position: absolute;
+  top: 10%;
+  right: 0;
+  z-index: 6;
+  font-size: 24px;
+  line-height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-indent: 20px;
+  text-transform: uppercase;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-box-shadow: 4px 1px 0px 4px black;
+          box-shadow: 4px 1px 0px 4px black;
+}
+
+.item__span__label-right {
+  left: 0;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.photo-gallery {
+  max-width: 1688px;
+  margin: 0 auto;
+}
+
+.photo-gallery ._container {
+  max-width: 1688px;
+}
+
+.photo-gallery ._container .photo__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1688px;
+  margin: 0 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+.contact {
+  height: 645px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact ._container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact #contact {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contact #contact .input-field {
+  max-width: 420px;
+  width: 100%;
+}
+
+.contact #contact #contact-message {
+  min-height: 120px;
+  max-width: 1280px;
+  width: 100%;
+  line-height: 25px;
+  resize: vertical;
+}
+
+.contact #contact label, .contact #contact .yellow-button {
+  max-width: 640px;
+  width: 100%;
+  text-align: center;
+  margin: 5px 0;
+}
+
+.contact #contact label a, .contact #contact .yellow-button a {
+  color: rgba(51, 51, 51, 0.5);
+}
+
+.contact #contact label {
+  color: rgba(51, 51, 51, 0.5);
+}
+
+.contact #contact label i {
+  padding: 0 10px;
+  color: #E8C300;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.map {
+  max-width: 1440px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+}
+
+.map .google-map {
+  height: 475px;
+  max-width: 1440px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.footer {
+  width: 100%;
+  height: 100px;
+  background: rgba(0, 0, 0, 0.9);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer span {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 12px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
 @media screen and (max-width: 1125px) {
   .book-a-table .yellow-button {
     -webkit-transition: all 0.4s ease;
@@ -769,6 +959,11 @@ a:hover {
 @media screen and (max-width: 1300px) {
   .delicious-menu .available-menu .menu__items {
     max-width: 846px;
+  }
+  #contact {
+    max-width: 420px;
+    width: 100%;
+    margin: 0 auto;
   }
 }
 
