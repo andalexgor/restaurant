@@ -4,6 +4,7 @@ body {
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
+  min-width: 320px;
 }
 
 .header {
@@ -16,6 +17,9 @@ body {
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
   z-index: 900;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header .menu {
@@ -41,6 +45,7 @@ body {
           align-items: center;
   width: 45%;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
 }
 
 .header .first-half__links, .header .second-half__links {
@@ -134,6 +139,22 @@ body {
           align-items: center;
 }
 
+.welcome-page .welcome-descriptions .middle-descriptions .titel-h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .welcome-page .welcome-descriptions .middle-descriptions h1 {
   margin: 0;
   font-family: "Banny Bold Round";
@@ -153,7 +174,7 @@ body {
   margin-left: 20px;
 }
 
-.welcome-page .welcome-descriptions .middle-descriptions .push-botton {
+.welcome-page .welcome-descriptions .middle-descriptions .move-next-sections {
   bottom: 10%;
   color: black;
   position: absolute;
@@ -161,7 +182,7 @@ body {
           transform: translate(-50%, 0);
 }
 
-.welcome-page .welcome-descriptions .middle-descriptions .push-botton span {
+.welcome-page .welcome-descriptions .middle-descriptions .move-next-sections span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -195,7 +216,7 @@ body {
           justify-content: center;
 }
 
-.welcome-page .welcome-descriptions .social-contacts .push-botton {
+.welcome-page .welcome-descriptions .social-contacts .push-button {
   font-size: 25px;
   position: relative;
   color: white;
@@ -297,6 +318,7 @@ a:hover {
 }
 
 .yellow-line {
+  display: block;
   height: 5px;
   width: 60px;
   background-color: yellow;
@@ -337,7 +359,7 @@ a:hover {
   transition: all 0.2s ease;
 }
 
-.push-botton {
+.push-button {
   position: absolute;
   height: 50px;
   width: 50px;
@@ -364,7 +386,7 @@ a:hover {
 
 .left-content, .right-content {
   width: 50%;
-  min-height: 675px;
+  height: 675px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -881,7 +903,7 @@ a:hover {
   max-width: 1280px;
   width: 100%;
   line-height: 25px;
-  resize: vertical;
+  resize: none;
 }
 
 .contact #contact label, .contact #contact .yellow-button {
@@ -947,15 +969,6 @@ a:hover {
   color: rgba(255, 255, 255, 0.5);
 }
 
-@media screen and (max-width: 1125px) {
-  .book-a-table .yellow-button {
-    -webkit-transition: all 0.4s ease;
-    transition: all 0.4s ease;
-    max-width: 250px;
-    width: 100%;
-  }
-}
-
 @media screen and (max-width: 1300px) {
   .delicious-menu .available-menu .menu__items {
     max-width: 846px;
@@ -967,9 +980,206 @@ a:hover {
   }
 }
 
+@media screen and (max-width: 1125px) {
+  .book-a-table .yellow-button {
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    max-width: 250px;
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 900px) {
   .delicious-menu .available-menu .menu__items {
     max-width: 400px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    background-color: #0a080645;
+    position: fixed;
+    height: 50px;
+  }
+  .header .header__burger {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    z-index: 20;
+    bottom: 50%;
+    right: 0;
+    margin-top: 40px;
+  }
+  .header .header__burger span {
+    position: absolute;
+    background-color: white;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    top: 9px;
+  }
+  .header .header__burger:before, .header .header__burger:after {
+    content: "";
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    z-index: 20;
+  }
+  .header .header__burger:before {
+    top: 0;
+  }
+  .header .header__burger::after {
+    bottom: 0;
+  }
+  .header .first-half, .header .second-half {
+    border-bottom: none;
+  }
+  .header .first-half ul, .header .second-half ul {
+    display: none;
+  }
+  .header .icon {
+    display: none;
+  }
+  .vertical-lines {
+    display: none;
+  }
+  .welcome-page {
+    height: 500px;
+  }
+  .welcome-page .welcome-descriptions {
+    height: 500px;
+  }
+  .welcome-page .welcome-descriptions .middle-descriptions {
+    width: 100%;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .welcome-page .welcome-descriptions .middle-descriptions h1 {
+    font-size: 40px;
+  }
+  .welcome-page .welcome-descriptions .middle-descriptions .button-more-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+  }
+  .welcome-page .welcome-descriptions .middle-descriptions .button-more-info .yellow-button, .welcome-page .welcome-descriptions .middle-descriptions .button-more-info .transparent-button {
+    margin: 5px 0;
+  }
+  .welcome-page .welcome-descriptions .middle-descriptions .move-next-sections {
+    bottom: 5%;
+  }
+  .welcome-page .welcome-descriptions .social-contacts, .welcome-page .welcome-descriptions .working-time {
+    display: none;
+  }
+  .about-us, .our-team, .book-a-table, .specialties, .private-events, .delicious-menu, .contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about-us ._container, .our-team ._container, .book-a-table ._container, .specialties ._container, .private-events ._container, .delicious-menu ._container, .contact ._container {
+    padding: 20px 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .about-us ._container .desription, .our-team ._container .desription, .book-a-table ._container .desription, .specialties ._container .desription, .private-events ._container .desription, .delicious-menu ._container .desription, .contact ._container .desription {
+    margin: 0 10px;
+    padding: 0;
+  }
+  .about-us ._container .right-content, .about-us ._container .left-content, .our-team ._container .right-content, .our-team ._container .left-content, .book-a-table ._container .right-content, .book-a-table ._container .left-content, .specialties ._container .right-content, .specialties ._container .left-content, .private-events ._container .right-content, .private-events ._container .left-content, .delicious-menu ._container .right-content, .delicious-menu ._container .left-content, .contact ._container .right-content, .contact ._container .left-content {
+    width: 100%;
+    height: 100%;
+  }
+  .about-us ._container .right-content .photo-content, .about-us ._container .left-content .photo-content, .our-team ._container .right-content .photo-content, .our-team ._container .left-content .photo-content, .book-a-table ._container .right-content .photo-content, .book-a-table ._container .left-content .photo-content, .specialties ._container .right-content .photo-content, .specialties ._container .left-content .photo-content, .private-events ._container .right-content .photo-content, .private-events ._container .left-content .photo-content, .delicious-menu ._container .right-content .photo-content, .delicious-menu ._container .left-content .photo-content, .contact ._container .right-content .photo-content, .contact ._container .left-content .photo-content {
+    min-height: 400px;
+    height: 100%;
+  }
+  .about-us ._container .right-content .photo-content .photo__item, .about-us ._container .left-content .photo-content .photo__item, .our-team ._container .right-content .photo-content .photo__item, .our-team ._container .left-content .photo-content .photo__item, .book-a-table ._container .right-content .photo-content .photo__item, .book-a-table ._container .left-content .photo-content .photo__item, .specialties ._container .right-content .photo-content .photo__item, .specialties ._container .left-content .photo-content .photo__item, .private-events ._container .right-content .photo-content .photo__item, .private-events ._container .left-content .photo-content .photo__item, .delicious-menu ._container .right-content .photo-content .photo__item, .delicious-menu ._container .left-content .photo-content .photo__item, .contact ._container .right-content .photo-content .photo__item, .contact ._container .left-content .photo-content .photo__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+  }
+  .about-us ._container .right-content .photo-content .photo__item .item__img-rigth, .about-us ._container .right-content .photo-content .photo__item .item__img-left, .about-us ._container .left-content .photo-content .photo__item .item__img-rigth, .about-us ._container .left-content .photo-content .photo__item .item__img-left, .our-team ._container .right-content .photo-content .photo__item .item__img-rigth, .our-team ._container .right-content .photo-content .photo__item .item__img-left, .our-team ._container .left-content .photo-content .photo__item .item__img-rigth, .our-team ._container .left-content .photo-content .photo__item .item__img-left, .book-a-table ._container .right-content .photo-content .photo__item .item__img-rigth, .book-a-table ._container .right-content .photo-content .photo__item .item__img-left, .book-a-table ._container .left-content .photo-content .photo__item .item__img-rigth, .book-a-table ._container .left-content .photo-content .photo__item .item__img-left, .specialties ._container .right-content .photo-content .photo__item .item__img-rigth, .specialties ._container .right-content .photo-content .photo__item .item__img-left, .specialties ._container .left-content .photo-content .photo__item .item__img-rigth, .specialties ._container .left-content .photo-content .photo__item .item__img-left, .private-events ._container .right-content .photo-content .photo__item .item__img-rigth, .private-events ._container .right-content .photo-content .photo__item .item__img-left, .private-events ._container .left-content .photo-content .photo__item .item__img-rigth, .private-events ._container .left-content .photo-content .photo__item .item__img-left, .delicious-menu ._container .right-content .photo-content .photo__item .item__img-rigth, .delicious-menu ._container .right-content .photo-content .photo__item .item__img-left, .delicious-menu ._container .left-content .photo-content .photo__item .item__img-rigth, .delicious-menu ._container .left-content .photo-content .photo__item .item__img-left, .contact ._container .right-content .photo-content .photo__item .item__img-rigth, .contact ._container .right-content .photo-content .photo__item .item__img-left, .contact ._container .left-content .photo-content .photo__item .item__img-rigth, .contact ._container .left-content .photo-content .photo__item .item__img-left {
+    border: 20px solid yellow;
+    left: auto;
+    top: auto;
+    right: auto;
+    bottom: auto;
+  }
+  .about-us .item__span-rigth, .about-us .item__span-left, .our-team .item__span-rigth, .our-team .item__span-left, .book-a-table .item__span-rigth, .book-a-table .item__span-left, .specialties .item__span-rigth, .specialties .item__span-left, .private-events .item__span-rigth, .private-events .item__span-left, .delicious-menu .item__span-rigth, .delicious-menu .item__span-left, .contact .item__span-rigth, .contact .item__span-left {
+    display: none;
+  }
+  .our-team ._container {
+    padding-top: 60px;
+  }
+  .book-a-table ._container {
+    padding-bottom: 60px;
+  }
+  .book-a-table .photo-content {
+    display: none;
+  }
+  .specialties .slick-track {
+    padding: 50px 0;
+  }
+  .specialties .slick-slider-specialties__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .specialties .slick-dots {
+    bottom: 0;
+  }
+  .private-events ._container {
+    padding: 60px 0;
+  }
+  .private-events ._container .item__span__label-left {
+    height: 316.663px;
+    right: 10.4%;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    opacity: 0.6;
+    top: 10.4%;
+  }
+  .private-events ._container .item__span__label-right {
+    height: 316.663px;
+    left: 10.4%;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    opacity: 0.6;
+    top: 10.4%;
   }
 }
 /*# sourceMappingURL=style.css.map */

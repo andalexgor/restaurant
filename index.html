@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./img/Vector.svg" >
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./js/slick-1.8.1/slick/slick.css" />
   <link rel="stylesheet" type="text/css" href="./js/slick-1.8.1/slick/slick-theme.css" />
@@ -19,7 +20,10 @@
 
 <body>
   <header class="header">
+
+   
     <nav class="menu">
+      
       <div class="first-half">
         <ul class="first-half__links">
           <li> <a href="#">HOME</a></li>
@@ -29,7 +33,7 @@
         </ul>
       </div>
       <div class="icon">
-        <img src="./img/Vector.svg" alt="site logo">
+        <a href="#"><img src="./img/Vector.svg" alt="site logo"></a>
       </div>
       <div class="second-half">
         <ul class="second-half__links">
@@ -38,9 +42,14 @@
           <li> <a href="#">EVENTS</a> </li>
           <li> <a href="#">CONTACT</a> </li>
         </ul>
+        <div class="header__burger">
+          <span></span>
+        </div>
+      </div>    
 
-      </div>
     </nav>
+    
+   
   </header>
   <main>
     <section class="welcome-page">
@@ -53,24 +62,26 @@
           <div class="working-time"><span> Mon - Fri: 8PM - 10PM, Sat - Sun: 8PM - 3AM</span></div>
           <div class="middle-descriptions">
             <h3 class="titel-h3">RESTAURANT</h3>
-            <h1>HUNGRY PEOPLE</h1>
-            <span class="yellow-line"></span>
+            <div class="titel-h1"><h1>HUNGRY PEOPLE</h1>
+              <span class="yellow-line"></span>
+            </div>
+            
             <div class="button-more-info">
               <button class="yellow-button ">BOOK TABLE</button>
               <button class="transparent-button ">EXPLORE</button>
             </div>
             <a href="#about-us">
-              <div class="push-botton transparent-button">
+              <div class="push-button transparent-button move-next-sections">
                 <span> <i class="fas fa-chevron-down"></i></span>
               </div>
             </a>
           </div>
           <div class="social-contacts">
-            <a href="#"> <span class="push-botton transparent-button"> <i class="fab fa-facebook-f"></i></span></a>
-            <a href="https://vk.com/andalexgor" target="blank"><span class="push-botton transparent-button"> <i
+            <a href="#"> <span class="push-button transparent-button"> <i class="fab fa-facebook-f"></i></span></a>
+            <a href="https://vk.com/andalexgor" target="blank"><span class="push-button transparent-button"> <i
                   class="fab fa-vk"></i></span></a>
             <a href="https://www.instagram.com/andalexgor/" target="blank"> <span
-                class="push-botton transparent-button"> <i class="fab fa-instagram"></i></span></a>
+                class="push-button transparent-button"> <i class="fab fa-instagram"></i></span></a>
           </div>
         </div>
       </div>
@@ -116,7 +127,7 @@
         </div>
         <div class="left-content">
           <div class="photo-content">
-            <div class="photo__items">
+            <div class="photo__item">
               <img class="item__img-left" src="./img/photo__item2.jpg" alt="fireplace">
               <span class="item__span-left"></span>
             </div>
@@ -193,7 +204,7 @@
           <div class="slick-slider-specialties__item">
             <div class="left-content">
               <div class="photo-content">
-                <div class="photo__items">
+                <div class="photo__item">
                   <img class="item__img-left" src="./img/photo__item4.jpg" alt="fireplace">
                   <span class="item__span-left"></span>
                 </div>
@@ -232,7 +243,7 @@
             <div class="right-content">
 
               <div class="photo-content">
-                <div class="photo__items">
+                <div class="photo__item">
                   <img class="item__img-rigth" src="./img/slider-photo-item1.jpg" alt="fireplace">
                   <span class="item__span-rigth"></span>
                 </div>
@@ -242,7 +253,7 @@
           <div class="slick-slider-specialties__item">
             <div class="left-content">
               <div class="photo-content">
-                <div class="photo__items">
+                <div class="photo__item">
                   <img class="item__img-left" src="./img/slider-photo-item2.jpg" alt="fireplace">
                   <span class="item__span-left"></span>
                 </div>
@@ -419,8 +430,6 @@
       </div>
     </section>
 
-
-
     <section class="private-events">
 
       <div class="_container ">
@@ -434,7 +443,7 @@
         </div>
         <div class="left-content">
           <div class="photo-content">
-            <div class="photo__items">
+            <div class="photo__item">
               <span class="item__span__label-left">weddings</span>
               <img class="item__img-left" src="./img/photo__item2.jpg" alt="fireplace">
               <span class="item__span-left"></span>

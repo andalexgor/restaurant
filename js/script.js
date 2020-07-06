@@ -4,7 +4,7 @@ $('.slick-slider-specialties').slick({
   autoplay: true,
   dots: true,
   arrows: false,
-  autoplaySpeed: 5000,
+  autoplaySpeed: 50000,
   touchMove: false,
   fade:true,
 

@@ -3,6 +3,7 @@ body{
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
+    min-width: 320px;
 }
 
 
@@ -15,6 +16,11 @@ body{
     margin-right: -50%;
     transform: translate(-50%, 0);
     z-index: 900;
+    align-items: center;
+
+    // .header__burger{
+    //     display: none;
+    // }
 
 .menu{
     align-items: flex-start;
@@ -30,6 +36,7 @@ body{
     align-items: center;
     width: 45%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
 
 }
 
@@ -39,6 +46,7 @@ body{
     justify-content: space-around;
     align-items: center;
     list-style: none;
+    
     
 
     li:hover{
@@ -101,6 +109,13 @@ body{
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            
+            .titel-h1{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
 
 
             h1{
@@ -121,7 +136,7 @@ body{
 
             }
 
-            .push-botton{
+            .move-next-sections{
                 bottom: 10%;
                 color: black;
                 position: absolute;
@@ -150,7 +165,7 @@ body{
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            .push-botton{
+            .push-button{
                 font-size: 25px;
                 position: relative;
                 color: white;
@@ -243,7 +258,7 @@ transition: all 0.2s ease;
     z-index: 67;
 }
 .yellow-line{
-
+   display: block;
    height: 5px;
    width: 60px;
    background-color: yellow;
@@ -282,7 +297,7 @@ transition: all 0.2s ease;
     
 }
 
-.push-botton{
+.push-button{
     position: absolute;
     height: 50px; 
     width: 50px;
@@ -307,7 +322,7 @@ transition: all 0.2s ease;
 }
 .left-content, .right-content{
     width: 50%;
-    min-height: 675px;
+    height: 675px;
     display: flex;
     align-items: center;
     text-align: center;
@@ -485,9 +500,10 @@ transition: all 0.2s ease;
     .vertical-lines{
         height: 100%;
     }
+    
 
  ///////slider setting
-.slick-slider-specialties{
+    .slick-slider-specialties{
     min-width: 0;
     max-width: 1400px;
     width:100%;
@@ -739,7 +755,7 @@ transition: all 0.2s ease;
             max-width: 1280px;
             width: 100%;
             line-height: 25px;
-            resize: vertical;
+            resize: none;
         }
 
         label, .yellow-button{
@@ -807,17 +823,7 @@ transition: all 0.2s ease;
 
 
 ////////////////// media
-@media screen and (max-width: 1125px){
-    .book-a-table {
 
-    .yellow-button{
-
-    transition: all 0.4s ease;
-    max-width: 250px;
-    width: 100%;
-}
-}
-}
 
 @media screen and (max-width: 1300px){
     
@@ -831,9 +837,218 @@ transition: all 0.2s ease;
         margin: 0 auto;
     }    
 }
+
+
+@media screen and (max-width: 1125px){
+    .book-a-table {
+
+        .yellow-button{
+
+        transition: all 0.4s ease;
+        max-width: 250px;
+        width: 100%;
+        }
+    }
+}
+
+
 @media screen and (max-width: 900px){
     
     .delicious-menu .available-menu .menu__items{
     max-width: 400px;   
     }
 }
+@media screen and (max-width: 767px){
+    
+    .header{
+    background-color: #0a080645;
+    position: fixed;
+    height: 50px;
+    
+
+    .header__burger{
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 20px;
+        z-index: 20;
+        bottom:  50%;
+        right: 0;
+        margin-top: 40px;
+    }
+
+    .header__burger span{
+        position: absolute;
+        background-color:white ;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+    }
+    .header__burger:before, .header__burger:after{
+        content: "";
+        background-color: white;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        z-index: 20;
+    }
+    .header__burger:before{
+        top: 0;
+    }
+    .header__burger::after{
+        bottom:  0;
+    }
+    .first-half,.second-half {
+        border-bottom:none ;
+
+        ul{
+            display: none;
+        }
+    }
+    .icon{
+        display: none;
+    }
+}
+    
+    .vertical-lines{
+        display: none;
+    }
+
+.welcome-page{
+    height: 500px;
+    .welcome-descriptions{
+        height: 500px;
+        
+         .middle-descriptions{
+             width: 100%;
+             justify-content: space-evenly;
+            
+         h1{
+             font-size: 40px;
+            }
+
+            .button-more-info{
+                display: flex;
+                flex-direction: column;
+                margin: 0;
+                .yellow-button, .transparent-button {
+                    margin: 5px 0;
+                }
+            }
+            .move-next-sections{
+                bottom: 5%;
+            }
+         }
+         .social-contacts, .working-time{
+             display: none;
+         }
+    }
+
+    
+}
+
+
+    .about-us, .our-team, .book-a-table, .specialties, .private-events, .delicious-menu, .contact{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        ._container{
+            padding: 20px 0;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+
+            .desription{
+                margin: 0 10px;
+                padding: 0;
+            }
+            .right-content, .left-content {
+                width: 100%;
+                height: 100%;
+                
+                .photo-content{
+                    min-height: 400px;
+                    height: 100%;
+                
+                .photo__item{
+                    display: flex;
+                    width: 100%;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100%;
+                    .item__img-rigth, .item__img-left{
+                        border: 20px solid yellow;
+                        left:auto;
+                        top: auto;
+                        right:auto;
+                        bottom: auto;
+                    }
+                        
+                }
+            }
+
+            }
+            
+        }
+        .item__span-rigth, .item__span-left{
+            display: none;
+        }
+    }
+    .our-team{
+    ._container{
+        padding-top: 60px;
+    }
+
+    }
+    .book-a-table{
+        ._container{
+            padding-bottom: 60px;
+        }
+        .photo-content{
+            display: none;
+        }
+        
+    }
+
+    .specialties{
+        .slick-track{
+            padding: 50px 0;
+        }
+
+        .slick-slider-specialties__item{
+            display: flex;
+            flex-direction: column;
+    
+        }
+        .slick-dots{
+            bottom: 0;
+        }
+        
+    }
+
+    .private-events{
+        ._container{
+            padding: 60px 0;
+
+            .item__span__label-left{
+
+                height: 316.663px;
+                right: 10.4%;
+                box-shadow: none;
+                opacity: 0.6;
+                top: 10.4%;
+            }
+            .item__span__label-right{
+
+                height: 316.663px;
+                left:  10.4%;
+                box-shadow: none;
+                opacity: 0.6;
+                top: 10.4%;
+            }
+        }
+
+    }
+}
+
