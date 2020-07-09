@@ -10,16 +10,12 @@ body {
 .header {
   max-width: 1440px;
   width: 100%;
-  margin: 0 auto;
   position: absolute;
   left: 50%;
   margin-right: -50%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
   z-index: 900;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .header .menu {
@@ -31,6 +27,10 @@ body {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+.header .m-menu {
+  display: none;
 }
 
 .header .first-half, .header .second-half {
@@ -442,12 +442,17 @@ a:hover {
       -ms-flex-align: end;
           align-items: flex-end;
   text-align: center;
-  margin-bottom: 0;
+  padding: 0 15px;
 }
 
 .desription .text, .photo-content .text {
   font-size: 13px;
   font-weight: 500;
+  max-height: 200px;
+  overflow: hidden;
+  -webkit-box-align: self-start;
+      -ms-flex-align: self-start;
+          align-items: self-start;
 }
 
 .photo-content {
@@ -620,6 +625,9 @@ a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .specialties .slick-slider {
@@ -857,7 +865,7 @@ a:hover {
 }
 
 .contact {
-  height: 645px;
+  min-height: 645px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -919,6 +927,8 @@ a:hover {
 
 .contact #contact label {
   color: rgba(51, 51, 51, 0.5);
+  padding: 0 10px;
+  line-height: 20px;
 }
 
 .contact #contact label i {
@@ -933,22 +943,18 @@ a:hover {
 .map {
   max-width: 1440px;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   margin: 0 auto;
 }
 
 .map .google-map {
-  height: 475px;
+  min-height: 475px;
   max-width: 1440px;
   width: 100%;
-  padding: 0 20px;
 }
 
 .footer {
   width: 100%;
-  height: 100px;
+  min-height: 100px;
   background: rgba(0, 0, 0, 0.9);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -990,6 +996,13 @@ a:hover {
 }
 
 @media screen and (max-width: 900px) {
+  .delicious-menu .categories-menu {
+    max-width: 450px;
+    margin: 15px 0;
+  }
+  .delicious-menu .categories-menu ul li {
+    padding: 12px 12px;
+  }
   .delicious-menu .available-menu .menu__items {
     max-width: 400px;
   }
@@ -997,9 +1010,41 @@ a:hover {
 
 @media screen and (max-width: 767px) {
   .header {
-    background-color: #0a080645;
+    background-color: #E8C300;
     position: fixed;
-    height: 50px;
+    min-height: 60px;
+    width: 100%;
+  }
+  .header .m-menu {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+    top: 0;
+    background-color: #E8C300;
+    display: block;
+    -webkit-transition: 0.2s ease;
+    transition: 0.2s ease;
+  }
+  .header .m-menu ul {
+    padding: 0;
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+  }
+  .header .m-menu ul li {
+    font-size: 20px;
+    margin: 20px 0 20px 20px;
+  }
+  .header .active-burger {
+    left: 0;
+    top: 0;
   }
   .header .header__burger {
     display: block;
@@ -1007,16 +1052,16 @@ a:hover {
     width: 30px;
     height: 20px;
     z-index: 20;
-    bottom: 50%;
+    top: 0;
     right: 0;
-    margin-top: 40px;
+    margin: 20px;
   }
   .header .header__burger span {
     position: absolute;
     background-color: white;
     left: 0;
     width: 100%;
-    height: 2px;
+    height: 3px;
     top: 9px;
   }
   .header .header__burger:before, .header .header__burger:after {
@@ -1024,7 +1069,7 @@ a:hover {
     background-color: white;
     position: absolute;
     width: 100%;
-    height: 2px;
+    height: 3px;
     z-index: 20;
   }
   .header .header__burger:before {
@@ -1033,32 +1078,27 @@ a:hover {
   .header .header__burger::after {
     bottom: 0;
   }
-  .header .first-half, .header .second-half {
-    border-bottom: none;
-  }
-  .header .first-half ul, .header .second-half ul {
-    display: none;
-  }
-  .header .icon {
+  .header .menu {
     display: none;
   }
   .vertical-lines {
     display: none;
   }
   .welcome-page {
-    height: 500px;
+    height: 450px;
   }
   .welcome-page .welcome-descriptions {
-    height: 500px;
+    height: 450px;
   }
   .welcome-page .welcome-descriptions .middle-descriptions {
+    height: 450px;
     width: 100%;
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
   .welcome-page .welcome-descriptions .middle-descriptions h1 {
-    font-size: 40px;
+    font-size: 50px;
   }
   .welcome-page .welcome-descriptions .middle-descriptions .button-more-info {
     display: -webkit-box;
@@ -1074,7 +1114,7 @@ a:hover {
     margin: 5px 0;
   }
   .welcome-page .welcome-descriptions .middle-descriptions .move-next-sections {
-    bottom: 5%;
+    display: none;
   }
   .welcome-page .welcome-descriptions .social-contacts, .welcome-page .welcome-descriptions .working-time {
     display: none;
@@ -1104,7 +1144,7 @@ a:hover {
             justify-content: space-between;
   }
   .about-us ._container .desription, .our-team ._container .desription, .book-a-table ._container .desription, .specialties ._container .desription, .private-events ._container .desription, .delicious-menu ._container .desription, .contact ._container .desription {
-    margin: 0 10px;
+    margin: 0;
     padding: 0;
   }
   .about-us ._container .right-content, .about-us ._container .left-content, .our-team ._container .right-content, .our-team ._container .left-content, .book-a-table ._container .right-content, .book-a-table ._container .left-content, .specialties ._container .right-content, .specialties ._container .left-content, .private-events ._container .right-content, .private-events ._container .left-content, .delicious-menu ._container .right-content, .delicious-menu ._container .left-content, .contact ._container .right-content, .contact ._container .left-content {
@@ -1129,7 +1169,7 @@ a:hover {
     height: 100%;
   }
   .about-us ._container .right-content .photo-content .photo__item .item__img-rigth, .about-us ._container .right-content .photo-content .photo__item .item__img-left, .about-us ._container .left-content .photo-content .photo__item .item__img-rigth, .about-us ._container .left-content .photo-content .photo__item .item__img-left, .our-team ._container .right-content .photo-content .photo__item .item__img-rigth, .our-team ._container .right-content .photo-content .photo__item .item__img-left, .our-team ._container .left-content .photo-content .photo__item .item__img-rigth, .our-team ._container .left-content .photo-content .photo__item .item__img-left, .book-a-table ._container .right-content .photo-content .photo__item .item__img-rigth, .book-a-table ._container .right-content .photo-content .photo__item .item__img-left, .book-a-table ._container .left-content .photo-content .photo__item .item__img-rigth, .book-a-table ._container .left-content .photo-content .photo__item .item__img-left, .specialties ._container .right-content .photo-content .photo__item .item__img-rigth, .specialties ._container .right-content .photo-content .photo__item .item__img-left, .specialties ._container .left-content .photo-content .photo__item .item__img-rigth, .specialties ._container .left-content .photo-content .photo__item .item__img-left, .private-events ._container .right-content .photo-content .photo__item .item__img-rigth, .private-events ._container .right-content .photo-content .photo__item .item__img-left, .private-events ._container .left-content .photo-content .photo__item .item__img-rigth, .private-events ._container .left-content .photo-content .photo__item .item__img-left, .delicious-menu ._container .right-content .photo-content .photo__item .item__img-rigth, .delicious-menu ._container .right-content .photo-content .photo__item .item__img-left, .delicious-menu ._container .left-content .photo-content .photo__item .item__img-rigth, .delicious-menu ._container .left-content .photo-content .photo__item .item__img-left, .contact ._container .right-content .photo-content .photo__item .item__img-rigth, .contact ._container .right-content .photo-content .photo__item .item__img-left, .contact ._container .left-content .photo-content .photo__item .item__img-rigth, .contact ._container .left-content .photo-content .photo__item .item__img-left {
-    border: 20px solid yellow;
+    border: 20px solid #E8C300;
     left: auto;
     top: auto;
     right: auto;
@@ -1140,6 +1180,10 @@ a:hover {
   }
   .our-team ._container {
     padding-top: 60px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
   .book-a-table ._container {
     padding-bottom: 60px;
@@ -1158,9 +1202,36 @@ a:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .specialties .slick-slider-specialties__item:nth-child(odd) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
   .specialties .slick-dots {
     bottom: 0;
+  }
+  .delicious-menu {
+    padding: 25px 0;
+  }
+  .delicious-menu .desription .titel-h4 {
+    margin: 10px;
+  }
+  .delicious-menu .available-menu .menu__items .dish__desriptions {
+    margin: 20px 0;
+  }
+  .delicious-menu .available-menu .menu__items .dish__desriptions .dish__desriptions__item .name-dishs {
+    font-size: 15px;
+  }
+  .delicious-menu .available-menu .menu__items .dish__desriptions .dish__desriptions__item .short-desriptions {
+    font-size: 10px;
+  }
+  .delicious-menu .available-menu .menu__items .dish__desriptions .dish__price .price {
+    font-size: 15px;
   }
   .private-events ._container {
     padding: 60px 0;
@@ -1181,5 +1252,9 @@ a:hover {
     opacity: 0.6;
     top: 10.4%;
   }
+}
+
+.hide {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
