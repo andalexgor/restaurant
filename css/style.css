@@ -1009,6 +1009,9 @@ a:hover {
 }
 
 @media screen and (max-width: 767px) {
+  body.lock {
+    overflow: hidden;
+  }
   .header {
     background-color: #E8C300;
     position: fixed;
