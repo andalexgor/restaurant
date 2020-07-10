@@ -448,11 +448,9 @@ a:hover {
 .desription .text, .photo-content .text {
   font-size: 13px;
   font-weight: 500;
-  max-height: 200px;
+  max-height: 400px;
   overflow: hidden;
-  -webkit-box-align: self-start;
-      -ms-flex-align: self-start;
-          align-items: self-start;
+  text-align: left;
 }
 
 .photo-content {
@@ -761,7 +759,11 @@ a:hover {
   font-size: 18px;
   line-height: 18px;
   margin: 25px 15px;
-  padding: 0 15px;
+  padding: 5px 15px;
+  max-height: 150px;
+  -webkit-transition: 0.1s all ease;
+  transition: 0.1s all ease;
+  position: relative;
 }
 
 .delicious-menu .available-menu .menu__items .dish__desriptions .dish__desriptions__item {
@@ -769,15 +771,11 @@ a:hover {
   width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-height: 70px;
   height: 100%;
 }
 
 .delicious-menu .available-menu .menu__items .dish__desriptions .dish__desriptions__item .name-dishs {
   color: black;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   margin: 0;
 }
 
@@ -788,6 +786,17 @@ a:hover {
   font-size: 12px;
   line-height: 12px;
   color: rgba(51, 51, 51, 0.5);
+}
+
+.delicious-menu .available-menu .menu__items .dish__desriptions:hover {
+  overflow: visible;
+  -webkit-transition: 0.1s all ease;
+  transition: 0.1s all ease;
+  background-color: #e8c300;
+  -webkit-box-shadow: 0px 0px 13px 1px #e8c300;
+          box-shadow: 0px 0px 13px 1px #e8c300;
+  max-height: 100%;
+  transition: 0.1s all ease;
 }
 
 .private-events {
