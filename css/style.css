@@ -59,6 +59,8 @@ body {
       -ms-flex-align: center;
           align-items: center;
   list-style: none;
+  text-transform: uppercase;
+  padding: 0;
 }
 
 .header .first-half__links li:hover, .header .second-half__links li:hover {
@@ -471,6 +473,7 @@ a:hover {
   top: 10%;
   left: 0;
   z-index: 3;
+  border-radius: 5px;
 }
 
 .photo-content .item__span-rigth {
@@ -482,6 +485,7 @@ a:hover {
   top: 28.5%;
   left: 58.5%;
   z-index: 4;
+  border-radius: 5px;
 }
 
 .photo-content .item__img-left {
@@ -708,6 +712,7 @@ a:hover {
   width: 100%;
   padding: 18.2px 20px;
   position: relative;
+  cursor: pointer;
 }
 
 .delicious-menu .categories-menu ul li span:after {
@@ -896,7 +901,7 @@ a:hover {
           flex-direction: column;
 }
 
-.contact #contact {
+.contact #form-contact {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -910,12 +915,12 @@ a:hover {
       flex-wrap: wrap;
 }
 
-.contact #contact .input-field {
+.contact #form-contact .input-field {
   max-width: 420px;
   width: 100%;
 }
 
-.contact #contact #contact-message {
+.contact #form-contact #contact-message {
   min-height: 120px;
   max-width: 1280px;
   width: 100%;
@@ -923,24 +928,24 @@ a:hover {
   resize: none;
 }
 
-.contact #contact label, .contact #contact .yellow-button {
+.contact #form-contact label, .contact #form-contact .yellow-button {
   max-width: 640px;
   width: 100%;
   text-align: center;
   margin: 5px 0;
 }
 
-.contact #contact label a, .contact #contact .yellow-button a {
+.contact #form-contact label a, .contact #form-contact .yellow-button a {
   color: rgba(51, 51, 51, 0.5);
 }
 
-.contact #contact label {
+.contact #form-contact label {
   color: rgba(51, 51, 51, 0.5);
   padding: 0 10px;
   line-height: 20px;
 }
 
-.contact #contact label i {
+.contact #form-contact label i {
   padding: 0 10px;
   color: #E8C300;
   font-style: normal;
@@ -1004,16 +1009,22 @@ a:hover {
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 960px) {
   .delicious-menu .categories-menu {
     max-width: 450px;
     margin: 15px 0;
+  }
+  .delicious-menu .categories-menu ul li:last-child span {
+    display: block;
   }
   .delicious-menu .categories-menu ul li {
     padding: 12px 12px;
   }
   .delicious-menu .available-menu .menu__items {
     max-width: 400px;
+  }
+  .menu .first-half .first-half__links li, .menu .first-half .second-half__links li, .menu .second-half .first-half__links li, .menu .second-half .second-half__links li {
+    font-size: 10px;
   }
 }
 
@@ -1097,13 +1108,13 @@ a:hover {
     display: none;
   }
   .welcome-page {
-    height: 450px;
+    height: 100%;
+    padding-top: 50px;
   }
   .welcome-page .welcome-descriptions {
-    height: 450px;
+    height: 100vh;
   }
   .welcome-page .welcome-descriptions .middle-descriptions {
-    height: 450px;
     width: 100%;
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
@@ -1267,6 +1278,10 @@ a:hover {
 }
 
 .hide {
-  display: none;
+  display: none !important;
+}
+
+.yllw-bgr {
+  background-color: #e8c300;
 }
 /*# sourceMappingURL=style.css.map */

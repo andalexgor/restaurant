@@ -44,6 +44,8 @@ body{
     justify-content: space-around;
     align-items: center;
     list-style: none;
+    text-transform: uppercase;
+    padding: 0;
     
     
 
@@ -382,6 +384,7 @@ transition: all 0.2s ease;
         top: 10%;
         left: 0;
         z-index: 3;
+        border-radius: 5px;
 
     }
     .item__span-rigth{
@@ -393,6 +396,7 @@ transition: all 0.2s ease;
         top: 28.5%;
         left:58.5%;
         z-index: 4;
+        border-radius: 5px;
     }
 
     .item__img-left{
@@ -587,6 +591,7 @@ transition: all 0.2s ease;
                     width: 100%;
                     padding: 18.2px 20px;
                     position: relative;
+                    cursor: pointer;
                 
                     span:after{
                     content: "";
@@ -752,7 +757,7 @@ transition: all 0.2s ease;
         
     }
 
-    #contact{
+    #form-contact{
         align-items: center;
         justify-content: center;
         display: flex;
@@ -868,19 +873,34 @@ transition: all 0.2s ease;
 }
 
 
-@media screen and (max-width: 900px){
+
+@media screen and (max-width: 960px){
     
     .delicious-menu {
         .categories-menu{
             max-width: 450px;
             margin: 15px 0;
             ul{
+                li:last-child span{
+                    display: block;
+                }
             li{
                 padding: 12px 12px;
             }}
+            
         }
     .available-menu .menu__items{
     max-width: 400px;   
+    }
+}
+
+.menu {
+    .first-half, .second-half{
+        .first-half__links, .second-half__links{
+            li{
+                font-size: 10px;
+            }
+        }
     }
 }
 }
@@ -970,12 +990,12 @@ transition: all 0.2s ease;
     }
 
 .welcome-page{
-    height: 450px;
+    height: 100%;
+    padding-top: 50px;
     .welcome-descriptions{
-            height: 450px;
+            height: 100vh;
         
          .middle-descriptions{
-            height: 450px;
              width: 100%;
              justify-content: space-evenly;
             
@@ -1148,5 +1168,9 @@ transition: all 0.2s ease;
 
 
 .hide{
-    display: none  
+    display: none !important;
+}
+
+.yllw-bgr{
+  background-color: #e8c300;
 }

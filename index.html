@@ -26,10 +26,10 @@
 
       <div class="first-half">
         <ul class="first-half__links">
-          <li> <a href="#">HOME</a></li>
-          <li> <a href="#">ABOUT</a></li>
-          <li> <a href="#">TEAM</a></li>
-          <li> <a href="#">BOOKING</a></li>
+          <li> <a href="#welcome-page">Главная</a></li>
+          <li> <a href="#about-us">О нас</a></li>
+          <li> <a href="#our-team">Команда</a></li>
+          <li> <a href="#book-a-table">Бронирование</a></li>
         </ul>
       </div>
       <div class="icon">
@@ -37,26 +37,26 @@
       </div>
       <div class="second-half">
         <ul class="second-half__links">
-          <li> <a href="#">MENU</a> </li>
-          <li> <a href="#">GALERIE</a> </li>
-          <li> <a href="#">EVENTS</a> </li>
-          <li> <a href="#">CONTACT</a> </li>
+          <li> <a href="#delicious-menu">Меню</a> </li>
+          <li> <a href="#private-events">Мероприятия</a> </li>
+          <li> <a href="#photo-gallery">Галерея</a> </li>
+          <li> <a href="#contact">Контакты</a> </li>
         </ul>
 
       </div>
 
     </nav>
 
-    <nav class="m-menu ">
+    <nav class="m-menu">
       <ul>
-        <li> <a href="#">HOME</a></li>
-        <li> <a href="#">ABOUT</a></li>
-        <li> <a href="#">TEAM</a></li>
-        <li> <a href="#">BOOKING</a></li>
-        <li> <a href="#">MENU</a> </li>
-        <li> <a href="#">GALERIE</a> </li>
-        <li> <a href="#">EVENTS</a> </li>
-        <li> <a href="#">CONTACT</a> </li>
+        <li> <a class="m-menu-burger-item" href="#welcome-page">Главная</a></li>
+        <li> <a class="m-menu-burger-item" href="#about-us">О нас</a></li>
+        <li> <a class="m-menu-burger-item" href="#our-team">Наша команда</a></li>
+        <li> <a class="m-menu-burger-item" href="#book-a-table">Бронирование</a></li>
+        <li> <a class="m-menu-burger-item" href="#delicious-menu">Меню</a> </li>
+        <li> <a class="m-menu-burger-item" href="#private-events">Мероприятия</a> </li>
+        <li> <a class="m-menu-burger-item" href="#photo-gallery">Галерея</a> </li>
+        <li> <a class="m-menu-burger-item" href="#contact">Контакты</a> </li>
       </ul>
     </nav>
     <div class="header__burger" id="header__burger">
@@ -67,7 +67,7 @@
   </header>
 
   <main>
-    <section class="welcome-page">
+    <section class="welcome-page" id="welcome-page">
       <div class="_container">
         <div class="vertical-lines">
           <span class="outer-line"></span>
@@ -136,7 +136,7 @@
 
 
     </section>
-    <section class="our-team">
+    <section class="our-team" id="our-team">
 
       <div class="_container ">
         <span class="section__header">
@@ -176,7 +176,7 @@
     </section>
 
 
-    <section class="book-a-table">
+    <section class="book-a-table" id="book-a-table">
       <div class="_container ">
         <div class="left-content">
           <div class="desription">
@@ -190,9 +190,8 @@
                 placeholder="Введите номер телефона">
               <input type="number" tabindex="4" min="1" max="10" name="count-people-book-a-table" required
                 class="input-field" placeholder="Введите количество гостей (до 10)">
-              <input type="date" tabindex="5" name="reservation-date" required class="input-field">
-              <input type="time" tabindex="6" name="reservation-time" required class="input-field" min="09:00"
-                max="23:00" step="900">
+              <input type="text" tabindex="5" name="reservation-date" required class="input-field" placeholder="Введите дату брони">
+              <input type="text" tabindex="6" name="reservation-time" required class="input-field" placeholder="Введите время брони">
               <button class="yellow-button" type="submit" form="form-book-a-table" value="Submit">BOOK NOW</button>
             </form>
 
@@ -217,7 +216,7 @@
     </section>
 
 
-    <section class="specialties">
+    <section class="specialties" id="specialties">
 
       <div class="_container ">
         <span class="section__header">
@@ -322,7 +321,7 @@
       </div>
     </section>
 
-    <section class="delicious-menu">
+    <section class="delicious-menu" id="delicious-menu">
       <div class="_container">
         <div class="desription">
           <h2 class="titel-h2">DELICIOUS MENU</h2>
@@ -332,13 +331,15 @@
         </div>
         <div class="categories-menu">
           <ul>
-            <li id="soupe">SOUPE<span></span></li>
-            <li id="pizza">PIZZA<span></span></li>
-            <li id="pasta">PASTA<span></span></li>
-            <li id="desert">DESERT<span></span></li>
-            <li id="wine">WINE<span></span></li>
-            <li id="beer">BEER<span></span></li>
-            <li id="drinks">DRINKS<span></span></li>
+            <li class="delicious-menu-name yllw-bgr" data-category="all">ALL<span></span></li>
+            <li class="delicious-menu-name" data-category="soupe">SOUPE<span></span></li>
+            <li class="delicious-menu-name" data-category="pizza">PIZZA<span></span></li>
+            <li class="delicious-menu-name" data-category="pasta">PASTA<span></span></li>
+            <li class="delicious-menu-name" data-category="desert">DESERT<span></span></li>
+            <li class="delicious-menu-name" data-category="wine">WINE<span></span></li>
+            <li class="delicious-menu-name" data-category="beer">BEER<span></span></li>
+            <li class="delicious-menu-name" data-category="drinks">DRINKS<span></span></li>
+            
           </ul>
         </div>
 
@@ -375,7 +376,7 @@
               </div>
               <div class="dish__price"><span class="price">150 RUB</span></div>
             </div>
-            <div class="dish__desriptions soupe">
+            <div class="dish__desriptions soupe ">
               <div class="dish__desriptions__item">
                 <h4 class="name-dishs">Щи зеленые</h4>
                 <span class="short-desriptions">Куриный бульон, щавель, картофель, яйцо. Подается со сметаной</span>
@@ -389,7 +390,7 @@
                   выбор</span>
               </div>
               <div class="dish__price"><span class="price">210 RUB</span></div>
-            </div>
+            </div> 
             <div class="dish__desriptions pizza">
               <div class="dish__desriptions__item pizza">
                 <h4 class="name-dishs">Пицца Цезарь</h4>
@@ -397,7 +398,7 @@
                   выбор (30 см)</span>
               </div>
               <div class="dish__price"><span class="price">480 RUB</span></div>
-            </div>
+            </div> 
             <div class="dish__desriptions pizza">
               <div class="dish__desriptions__item">
                 <h4 class="name-dishs">Пицца Четыре сезона</h4>
@@ -405,7 +406,7 @@
                   обжаренное куриное филе, бекон, ветчина, шампиньоны (30 см)</span>
               </div>
               <div class="dish__price"><span class="price">530 RUB</span></div>
-            </div>
+            </div> 
             <div class="dish__desriptions pizza">
               <div class="dish__desriptions__item">
                 <h4 class="name-dishs">Пицца Карбонара с бортами</h4>
@@ -413,7 +414,7 @@
                   выбор</span>
               </div>
               <div class="dish__price"><span class="price">310 RUB</span></div>
-            </div>
+            </div> 
             <div class="dish__desriptions pizza">
               <div class="dish__desriptions__item">
                 <h4 class="name-dishs">Пицца Ветчина и грибы с бортами</h4>
@@ -421,7 +422,7 @@
                   выбор</span>
               </div>
               <div class="dish__price"><span class="price">250 RUB</span></div>
-            </div>
+            </div> 
             <div class="dish__desriptions pizza">
               <div class="dish__desriptions__item">
                 <h4 class="name-dishs">Пицца Морская с бортами</h4>
@@ -429,21 +430,21 @@
                   сливочный, помидоры черри. Размер на выбор</span>
               </div>
               <div class="dish__price"><span class="price">360 RUB</span></div>
-            </div>
+            </div> 
             <div class="dish__desriptions pasta">
               <div class="dish__desriptions__item">
                 <h4 class="name-dishs">Тальятелле Карбонара</h4>
                 <span class="short-desriptions">Плоская паста с беконом, сливками, яйцом и пармезаном</span>
               </div>
               <div class="dish__price"><span class="price">370 RUB</span></div>
-            </div>
+            </div> 
             <div class="dish__desriptions pasta">
               <div class="dish__desriptions__item">
                 <h4 class="name-dishs">Феттуччине с семгой</h4>
                 <span class="short-desriptions">Традиционная римская плоская паста с семгой и сливками</span>
               </div>
               <div class="dish__price"><span class="price">555 RUB</span></div>
-            </div>
+            </div> 
             <div class="dish__desriptions pasta">
               <div class="dish__desriptions__item">
                 <h4 class="name-dishs">Спагетти Неро с креветками и шпинатом</h4>
@@ -451,7 +452,7 @@
                   сливочным соусом и пармезаном</span>
               </div>
               <div class="dish__price"><span class="price">495 RUB</span></div>
-            </div>
+            </div> 
             <div class="dish__desriptions desert">
               <div class="dish__desriptions__item">
                 <h4 class="name-dishs">Блины с шоколадом</h4>
@@ -466,7 +467,7 @@
       </div>
     </section>
 
-    <section class="private-events">
+    <section class="private-events" id="private-events">
 
       <div class="_container ">
         <span class="section__header">
@@ -481,7 +482,7 @@
           <div class="photo-content">
             <div class="photo__item">
               <span class="item__span__label-left">weddings</span>
-              <img class="item__img-left" src="./img/photo__item2.jpg" alt="fireplace">
+              <img class="item__img-left" src="./img/weddings.jpg" alt="fireplace">
               <span class="item__span-left"></span>
             </div>
           </div>
@@ -489,8 +490,8 @@
         <div class="right-content">
           <div class="photo-content">
             <div class="photo__item">
-              <span class="item__span__label-right">weddings</span>
-              <img class="item__img-rigth" src="./img/slider-photo-item3.jpg" alt="fireplace">
+              <span class="item__span__label-right">corporate parties</span>
+              <img class="item__img-rigth" src="./img/corporate_parties.jpg" alt="fireplace">
               <span class="item__span-rigth"></span>
             </div>
           </div>
@@ -504,7 +505,7 @@
 
     </section>
 
-    <section class="photo-gallery">
+    <section class="photo-gallery" id="photo-gallery">
       <div class="_container">
         <div class="photo__items">
           <img src="/img/photo-gallerey1.jpg" alt="">
@@ -516,7 +517,7 @@
       </div>
     </section>
 
-    <section class="contact">
+    <section class="contact" id="contact">
       <div class="_container">
         <div class="desription">
           <h2 class="titel-h2">CONTACT</h2>
@@ -524,10 +525,10 @@
           <h4 class="titel-h4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus,
             molestie est a, tempor magna.</h4>
         </div>
-        <form action="#" method="GET" id="contact">
-          <input type="text" tabindex="1" name="user-name" required class="input-field" placeholder="Введите имя">
-          <input type="email" tabindex="2" name="user-email" required class="input-field" placeholder="E-mail">
-          <input type="tel" tabindex="3" name="user-phone" required class="input-field"
+        <form action="#" method="GET" id="form-contact">
+          <input type="text" tabindex="7" name="user-name" required class="input-field" placeholder="Введите имя">
+          <input type="email" tabindex="8" name="user-email" required class="input-field" placeholder="E-mail">
+          <input type="tel" tabindex="9" name="user-phone" required class="input-field"
             placeholder="Введите номер телефона">
           <textarea name="contact-message" id="contact-message" required class="input-field"
             placeholder="Ваше сообщение..."></textarea>
@@ -535,7 +536,7 @@
               <a href="tel:+40 729 131 637"><i class="fas fa-phone"></i>+40 729 131 637</a> <a
                 href="mailto:andalexgor@gmail.com"><i
                   class="fas fa-envelope"></i>andalexgor@gmail.com</a></strong></label>
-          <button class="yellow-button" type="submit" form="contact" value="Submit">SEND MESSAGE</button>
+          <button class="yellow-button" type="submit" form="form-contact" value="Submit">SEND MESSAGE</button>
         </form>
 
       </div>
