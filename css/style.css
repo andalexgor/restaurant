@@ -1,4 +1,8 @@
 @charset "UTF-8";
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   font-style: normal;
@@ -12,7 +16,6 @@ body {
   width: 100%;
   position: absolute;
   left: 50%;
-  margin-right: -50%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
   z-index: 900;
@@ -232,7 +235,6 @@ body {
   margin: 0 auto;
   position: absolute;
   left: 50%;
-  margin-right: -50%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
   z-index: 1;
@@ -713,6 +715,16 @@ a:hover {
   padding: 18.2px 20px;
   position: relative;
   cursor: pointer;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .delicious-menu .categories-menu ul li span:after {
@@ -809,6 +821,24 @@ a:hover {
   background: url(../img/bg-4.jpg) 0 0/100% auto no-repeat;
   background-size: cover;
   color: white;
+}
+
+.private-events .photo-content {
+  z-index: 3;
+}
+
+.private-events .photo-content a {
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+}
+
+.private-events .photo-content a:hover {
+  opacity: 0.7;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
 }
 
 .private-events .footer__item-text {
@@ -1028,8 +1058,8 @@ a:hover {
   }
 }
 
-@media screen and (max-width: 767px) {
-  body.lock {
+@media screen and (max-width: 767px), (max-height: 400px) {
+  html.lock {
     overflow: hidden;
   }
   .header {
@@ -1048,6 +1078,7 @@ a:hover {
     display: block;
     -webkit-transition: 0.2s ease;
     transition: 0.2s ease;
+    overflow: auto;
   }
   .header .m-menu ul {
     padding: 0;
@@ -1059,7 +1090,7 @@ a:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin: 0;
+    margin: 0 0 30px 0;
   }
   .header .m-menu ul li {
     font-size: 20px;
@@ -1068,6 +1099,7 @@ a:hover {
   .header .active-burger {
     left: 0;
     top: 0;
+    position: fixed;
   }
   .header .header__burger {
     display: block;
@@ -1086,6 +1118,8 @@ a:hover {
     width: 100%;
     height: 3px;
     top: 9px;
+    -webkit-transition: 0.1s all ease;
+    transition: 0.1s all ease;
   }
   .header .header__burger:before, .header .header__burger:after {
     content: "";
@@ -1094,6 +1128,8 @@ a:hover {
     width: 100%;
     height: 3px;
     z-index: 20;
+    -webkit-transition: 0.1s all ease;
+    transition: 0.1s all ease;
   }
   .header .header__burger:before {
     top: 0;
@@ -1103,6 +1139,19 @@ a:hover {
   }
   .header .menu {
     display: none;
+  }
+  .header .header__burger.active-span span {
+    display: none;
+  }
+  .header .active-span::before {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    top: 8px;
+  }
+  .header .active-span::after {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    bottom: 8px;
   }
   .vertical-lines {
     display: none;
@@ -1193,10 +1242,9 @@ a:hover {
   }
   .about-us ._container .right-content .photo-content .photo__item .item__img-rigth, .about-us ._container .right-content .photo-content .photo__item .item__img-left, .about-us ._container .left-content .photo-content .photo__item .item__img-rigth, .about-us ._container .left-content .photo-content .photo__item .item__img-left, .our-team ._container .right-content .photo-content .photo__item .item__img-rigth, .our-team ._container .right-content .photo-content .photo__item .item__img-left, .our-team ._container .left-content .photo-content .photo__item .item__img-rigth, .our-team ._container .left-content .photo-content .photo__item .item__img-left, .book-a-table ._container .right-content .photo-content .photo__item .item__img-rigth, .book-a-table ._container .right-content .photo-content .photo__item .item__img-left, .book-a-table ._container .left-content .photo-content .photo__item .item__img-rigth, .book-a-table ._container .left-content .photo-content .photo__item .item__img-left, .specialties ._container .right-content .photo-content .photo__item .item__img-rigth, .specialties ._container .right-content .photo-content .photo__item .item__img-left, .specialties ._container .left-content .photo-content .photo__item .item__img-rigth, .specialties ._container .left-content .photo-content .photo__item .item__img-left, .private-events ._container .right-content .photo-content .photo__item .item__img-rigth, .private-events ._container .right-content .photo-content .photo__item .item__img-left, .private-events ._container .left-content .photo-content .photo__item .item__img-rigth, .private-events ._container .left-content .photo-content .photo__item .item__img-left, .delicious-menu ._container .right-content .photo-content .photo__item .item__img-rigth, .delicious-menu ._container .right-content .photo-content .photo__item .item__img-left, .delicious-menu ._container .left-content .photo-content .photo__item .item__img-rigth, .delicious-menu ._container .left-content .photo-content .photo__item .item__img-left, .contact ._container .right-content .photo-content .photo__item .item__img-rigth, .contact ._container .right-content .photo-content .photo__item .item__img-left, .contact ._container .left-content .photo-content .photo__item .item__img-rigth, .contact ._container .left-content .photo-content .photo__item .item__img-left {
     border: 20px solid #E8C300;
-    left: auto;
-    top: auto;
-    right: auto;
-    bottom: auto;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
   }
   .about-us .item__span-rigth, .about-us .item__span-left, .our-team .item__span-rigth, .our-team .item__span-left, .book-a-table .item__span-rigth, .book-a-table .item__span-left, .specialties .item__span-rigth, .specialties .item__span-left, .private-events .item__span-rigth, .private-events .item__span-left, .delicious-menu .item__span-rigth, .delicious-menu .item__span-left, .contact .item__span-rigth, .contact .item__span-left {
     display: none;
@@ -1265,7 +1313,7 @@ a:hover {
     -webkit-box-shadow: none;
             box-shadow: none;
     opacity: 0.6;
-    top: 10.4%;
+    top: 15%;
   }
   .private-events ._container .item__span__label-right {
     height: 316.663px;
@@ -1273,7 +1321,21 @@ a:hover {
     -webkit-box-shadow: none;
             box-shadow: none;
     opacity: 0.6;
-    top: 10.4%;
+    top: 15%;
+  }
+  .photo-gallery ._container .photo__items {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 460px;
+            flex: 0 1 460px;
+  }
+  .photo-gallery ._container .photo__items img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    border: 3px solid #e8c300;
   }
 }
 

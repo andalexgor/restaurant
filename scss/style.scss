@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
@@ -12,7 +16,6 @@ body{
     width: 100%;
     position: absolute;
     left: 50%;
-    margin-right: -50%;
     transform: translate(-50%, 0);
     z-index: 900;
 
@@ -181,7 +184,6 @@ body{
     margin: 0 auto;
     position: absolute;
     left: 50%;
-    margin-right: -50%;
     transform: translate(-50%, 0);
     z-index: 1;
     
@@ -592,6 +594,11 @@ transition: all 0.2s ease;
                     padding: 18.2px 20px;
                     position: relative;
                     cursor: pointer;
+                    text-transform: uppercase;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    
                 
                     span:after{
                     content: "";
@@ -688,12 +695,27 @@ transition: all 0.2s ease;
     background: url(../img/bg-4.jpg) 0 0/100% auto no-repeat  ;
     background-size: cover;
     color: white;
+    .photo-content{
+        z-index: 3;
+        a{
+            height: 100%;
+            width: 100%;
+        opacity: 1;
+        transition: 0.3s ease all;
 
+        }
+        a:hover{
+        opacity: 0.7;
+        transition: 0.3s ease all;
+        }
+
+    }
     .footer__item-text{
         color: rgba(255, 255, 255, 0.5);
         a{
             color: rgba(255, 255, 255, 0.5);
         }
+        
     }
 }
 
@@ -904,9 +926,9 @@ transition: all 0.2s ease;
     }
 }
 }
-@media screen and (max-width: 767px){
+@media screen and (max-width: 767px ), (max-height: 400px){
     
-    body.lock{
+    html.lock{
         overflow: hidden;
     }
     .header{
@@ -925,6 +947,7 @@ transition: all 0.2s ease;
             background-color: #E8C300;
             display: block;
             transition: 0.2s ease;
+            overflow: auto;
             
 
             ul{
@@ -932,7 +955,7 @@ transition: all 0.2s ease;
                 list-style: none;
                 display: flex;
                 flex-direction: column;
-                margin: 0;
+                margin: 0 0 30px 0;
 
                 li{
                     font-size: 20px;
@@ -944,8 +967,9 @@ transition: all 0.2s ease;
         .active-burger{
             left: 0;
             top: 0;
-            
+            position: fixed;
         }
+
     .header__burger{
         display: block;
         position: absolute;
@@ -964,6 +988,7 @@ transition: all 0.2s ease;
         width: 100%;
         height: 3px;
         top: 9px;
+        transition: 0.1s all ease;
     }
     .header__burger:before, .header__burger:after{
         content: "";
@@ -972,6 +997,7 @@ transition: all 0.2s ease;
         width: 100%;
         height: 3px;
         z-index: 20;
+        transition: 0.1s all ease;
     }
     .header__burger:before{
         top: 0;
@@ -981,6 +1007,18 @@ transition: all 0.2s ease;
     }
     .menu {
         display: none;
+    }
+
+    .header__burger.active-span span{
+        display: none;
+    }
+    .active-span::before{
+        transform: rotate(45deg);
+        top: 8px;
+    }
+    .active-span::after{
+        transform: rotate(-45deg);
+        bottom: 8px;
     }
 
 }
@@ -1054,10 +1092,8 @@ transition: all 0.2s ease;
                     height: 100%;
                     .item__img-rigth, .item__img-left{
                         border: 20px solid #E8C300;
-                        left:auto;
-                        top: auto;
-                        right:auto;
-                        bottom: auto;
+                        left: 50%;
+                        transform: translate(-50%, 0);
                     }
                         
                 }
@@ -1149,7 +1185,7 @@ transition: all 0.2s ease;
                 right: 10.4%;
                 box-shadow: none;
                 opacity: 0.6;
-                top: 10.4%;
+                top: 15%;
             }
             .item__span__label-right{
 
@@ -1157,13 +1193,24 @@ transition: all 0.2s ease;
                 left:  10.4%;
                 box-shadow: none;
                 opacity: 0.6;
-                top: 10.4%;
+                top: 15%;
             }
         }
 
     }
-}
 
+    .photo-gallery ._container .photo__items{
+        flex-direction: column;
+        flex: 0 1 460px;
+       
+        img{
+            object-fit: cover;
+            border: 3px solid #e8c300;
+       
+        }
+       }
+       
+}
 
 
 
