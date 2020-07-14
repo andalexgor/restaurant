@@ -8,11 +8,10 @@ body{
     font-weight: bold;
     font-size: 12px;
     min-width: 320px;
-
 }
 
 .header{
-    max-width: 1440px;
+    // max-width: 1440px;
     width: 100%;
     position: absolute;
     left: 50%;
@@ -258,6 +257,7 @@ transition: all 0.2s ease;
     line-height: 14px;
     letter-spacing: 0.5em;
     z-index: 67;
+    text-transform: uppercase;
 }
 .yellow-line{
    display: block;
@@ -281,6 +281,7 @@ transition: all 0.2s ease;
     color: white;
     border: none;
     transition: all 0.5s ease;
+    text-transform: uppercase;
 }
 .yellow-button:hover{
 opacity: 0.8;
@@ -316,7 +317,10 @@ transition: all 0.2s ease;
     min-height: 675px;
     width: 100%;
     background: #FFFFFF;
-
+    ._container{
+        padding: 20px 0;
+    }
+    
 }
 .left-content, .right-content{
     width: 50%;
@@ -367,7 +371,7 @@ transition: all 0.2s ease;
         font-weight: 500;
         max-height: 400px;
         overflow: hidden;
-        text-align: left;
+        text-align: center;
     }
     
 }
@@ -442,7 +446,7 @@ transition: all 0.2s ease;
     z-index: 5;
 }
 .section__header {
-    max-width:1440px ;
+    max-width:1440px;
     width: 100%;
     text-align: center;
     position: absolute;
@@ -868,6 +872,20 @@ transition: all 0.2s ease;
 ////////////////// media
 
 
+@media screen and (max-width:1439px){
+    .photo-gallery ._container .photo__items{
+        max-width: 750px;
+        width: 100%;
+        overflow: auto;
+        flex-wrap: wrap;
+        img{
+            margin: 0px 3px 6px 3px;
+            border: 3px solid #e8c300;
+        }
+    }
+}
+
+
 @media screen and (max-width: 1300px){
     
     .delicious-menu .available-menu .menu__items{
@@ -882,7 +900,7 @@ transition: all 0.2s ease;
 }
 
 
-@media screen and (max-width: 1125px){
+@media screen and (max-width: 1124px){
     .book-a-table {
 
         .yellow-button{
@@ -892,6 +910,8 @@ transition: all 0.2s ease;
         width: 100%;
         }
     }
+
+
 }
 
 
@@ -925,6 +945,9 @@ transition: all 0.2s ease;
         }
     }
 }
+
+
+
 }
 @media screen and (max-width: 767px ), (max-height: 400px){
     
@@ -1186,6 +1209,7 @@ transition: all 0.2s ease;
                 box-shadow: none;
                 opacity: 0.6;
                 top: 15%;
+                font-size: 17px;
             }
             .item__span__label-right{
 
@@ -1194,6 +1218,7 @@ transition: all 0.2s ease;
                 box-shadow: none;
                 opacity: 0.6;
                 top: 15%;
+                font-size: 17px;
             }
         }
 
@@ -1206,7 +1231,11 @@ transition: all 0.2s ease;
         img{
             object-fit: cover;
             border: 3px solid #e8c300;
+            margin: 0 0 6px 0;
        
+        }
+        img:last-child{
+            margin: 0;
         }
        }
        

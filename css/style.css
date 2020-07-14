@@ -12,7 +12,6 @@ body {
 }
 
 .header {
-  max-width: 1440px;
   width: 100%;
   position: absolute;
   left: 50%;
@@ -319,6 +318,7 @@ a:hover {
   line-height: 14px;
   letter-spacing: 0.5em;
   z-index: 67;
+  text-transform: uppercase;
 }
 
 .yellow-line {
@@ -343,6 +343,7 @@ a:hover {
   border: none;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  text-transform: uppercase;
 }
 
 .yellow-button:hover {
@@ -386,6 +387,10 @@ a:hover {
   min-height: 675px;
   width: 100%;
   background: #FFFFFF;
+}
+
+.about-us ._container {
+  padding: 20px 0;
 }
 
 .left-content, .right-content {
@@ -454,7 +459,7 @@ a:hover {
   font-weight: 500;
   max-height: 400px;
   overflow: hidden;
-  text-align: left;
+  text-align: center;
 }
 
 .photo-content {
@@ -1019,6 +1024,20 @@ a:hover {
   color: rgba(255, 255, 255, 0.5);
 }
 
+@media screen and (max-width: 1439px) {
+  .photo-gallery ._container .photo__items {
+    max-width: 750px;
+    width: 100%;
+    overflow: auto;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .photo-gallery ._container .photo__items img {
+    margin: 0px 3px 6px 3px;
+    border: 3px solid #e8c300;
+  }
+}
+
 @media screen and (max-width: 1300px) {
   .delicious-menu .available-menu .menu__items {
     max-width: 846px;
@@ -1030,7 +1049,7 @@ a:hover {
   }
 }
 
-@media screen and (max-width: 1125px) {
+@media screen and (max-width: 1124px) {
   .book-a-table .yellow-button {
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
@@ -1314,6 +1333,7 @@ a:hover {
             box-shadow: none;
     opacity: 0.6;
     top: 15%;
+    font-size: 17px;
   }
   .private-events ._container .item__span__label-right {
     height: 316.663px;
@@ -1322,6 +1342,7 @@ a:hover {
             box-shadow: none;
     opacity: 0.6;
     top: 15%;
+    font-size: 17px;
   }
   .photo-gallery ._container .photo__items {
     -webkit-box-orient: vertical;
@@ -1336,6 +1357,10 @@ a:hover {
     -o-object-fit: cover;
        object-fit: cover;
     border: 3px solid #e8c300;
+    margin: 0 0 6px 0;
+  }
+  .photo-gallery ._container .photo__items img:last-child {
+    margin: 0;
   }
 }
 

@@ -7,7 +7,6 @@ $('.slick-slider-specialties').slick({
   autoplaySpeed: 5000,
   touchMove: false,
   fade: true,
-  // adaptiveHeight: true,
 });
 
 
@@ -50,14 +49,46 @@ foodCategory.addEventListener('click', event => {
 })
 let deliciousMenuName = document.querySelectorAll('.delicious-menu-name')
 
-for (let i = 0; i < deliciousMenuName.length; i++){
- 
-deliciousMenuName[i].onclick = function() {
-  deliciousMenuName.forEach (element => element.classList.remove('yllw-bgr'))
+for (let i = 0; i < deliciousMenuName.length; i++) {
 
-  deliciousMenuName[i].classList.add('yllw-bgr')
+  deliciousMenuName[i].onclick = function () {
+    deliciousMenuName.forEach(element => element.classList.remove('yllw-bgr'))
+
+    deliciousMenuName[i].classList.add('yllw-bgr')
 
   }
 
 }
 
+let siteIcon = document.querySelector('.icon')
+
+
+function removeWowClass() {
+  siteIcon.classList.remove('wow')
+  siteIcon.classList.remove('flip')
+  siteIcon.classList.remove('animated')
+}
+siteIcon.addEventListener('click', (event) => {
+  siteIcon.classList.add('wow')
+  siteIcon.classList.add('flip')
+  siteIcon.classList.add('animated')
+
+  setTimeout(removeWowClass, 1000)
+
+})
+
+
+const classMobileAnimations = document.querySelectorAll('.wow')
+function removeMobileAnimationClass() {
+
+  if (document.documentElement.clientWidth <= 768 || document.documentElement.clientHeight <= 400) {
+
+    for (let i = 0; i < classMobileAnimations.length; i++) {
+      classMobileAnimations[i].classList.remove('wow')
+      classMobileAnimations[i].classList.remove('fadeInLeft')
+      classMobileAnimations[i].classList.remove('fadeInRight')
+    }
+
+  }
+}
+removeMobileAnimationClass()
